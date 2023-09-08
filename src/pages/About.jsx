@@ -52,7 +52,8 @@ const About = () => {
 <div className="ourAdvantage">
 <CardMedia
                   component="img"
-                  sx={{ width: '50%', height: '100%', objectFit: 'cover' }}
+                  className='our__advantage'
+                  // sx={{  }}
                   image={our__advantage}
                   alt="about"
                 /> 
