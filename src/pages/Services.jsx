@@ -41,10 +41,10 @@ const TeamsData=[
     {
       TeamsData.map((team,index)=>{
         return(
-          <Paper key={index} elevation={10} sx={{width:'250px',height:'300px',textAlign:'center'}}>
+          <Paper key={index} elevation={10} sx={{width:250,height:300,textAlign:'center'}}>
           <CardMedia
                     component="img"
-                    sx={{ width:'250px', height: '250px', objectFit: 'cover' }}
+                    sx={{ width:250, height: 250, objectFit: 'cover' }}
                     image={team.img}
                     alt="about"
                   /> 
