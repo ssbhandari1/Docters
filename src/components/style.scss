@@ -12,7 +12,11 @@
 
 .homeBanner{
     width: 100%;
-   height: 60vh;
+   height: 30vh;
+   @include md {
+    width: 100%;
+    height: 60vh;
+}
 
 }
 
@@ -24,13 +28,14 @@
     width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
-  gap: 2rem;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     p{
-        font-size: 1.1rem;
+        font-size: .9rem;
+        padding: 0 0.5rem ;
         text-align: center;
         @include md {
             font-size: 1.2rem;

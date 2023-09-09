@@ -16,7 +16,7 @@ const TeamsData=[
     <div className="aboutContainer">
      <div className="teamBanner">
       <div className="Admin">
-        <Paper elevation={10} sx={{width:'250px',height:'270px'}}>
+        <Paper elevation={10} className='adminImg'>
         <CardMedia
                   component="img"
                   sx={{ width:'100%', height: '100%', objectFit: 'cover' }}

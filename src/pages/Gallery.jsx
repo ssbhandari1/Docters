@@ -9,6 +9,9 @@ const Gallery = () => {
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+    {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+    {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+
   ]
   return (
     <div className="aboutContainer">

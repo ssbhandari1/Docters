@@ -14,7 +14,7 @@
 
 .aboutBanner{
     width: 100%;
-   height: 40vh;
+   height: 42vh;
    position: relative;
    @include md {
     height: 60vh;
@@ -33,8 +33,12 @@
     p{
 letter-spacing: 1.2px;
 line-height: 1.3rem;
-font-size: 15px;
+font-size: 14px;
+@include md {
+    font-size: 15px;
+}
     }
+
    }
 }
 
@@ -52,12 +56,16 @@ font-size: 15px;
         font-size: 16px; 
         color: gray; 
         margin-bottom: 2rem;
-        margin-left: 3rem;
+        margin-left: 1rem;
+        @include md {
+         
+            margin-left: 3rem;
+        }
     }
 }
 .ourAdvantage{
     width: 100%;
-    height: 70vh;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,11 +74,11 @@ font-size: 15px;
     }
     .our__advantage{
         width: 100%;
-         height: 50%;
+         height: 35vh;
           object-fit: cover;
           @include md {
             width: 50%;
-            height: 100%;
+            height: 70vh;
         }
     }
   
@@ -79,6 +87,7 @@ font-size: 15px;
         z-index: 1;
         right: 15%;
         top: 20%;
+        padding: 0.3rem;
         ul{
             text-decoration: none;
             list-style: none;
@@ -86,9 +95,14 @@ font-size: 15px;
             li{
                 display: flex;
                 align-items: center;
-                gap: 1rem;
-                margin-top: 1.5rem;
-                margin-left: 2rem;
+                gap: .71rem;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                @include md {
+                    gap: 1rem;
+                    margin-top: 1.5rem;
+                    margin-left: 2rem;
+                }
             }
         }
     }
@@ -99,15 +113,15 @@ font-size: 15px;
 //for Service Component
 .teamBanner{
     width: 100%;
-    height: 60vh;
-  
+    // height: 60vh;
+  margin:2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
  
     .Admin{
-width: 70%;
-height: 80%;
+width: 90%;
+height: 70vh;
 background-color: white;
 display: flex;
 justify-content: space-around;
@@ -118,13 +132,26 @@ box-shadow: 1px 2px 10px 2px black ;
 @include md {
     flex-direction: row;
     width: 70%;
-height: 80%;
+    height: 50vh;
+}
+.adminImg{
+    max-width:250px;
+        height:270px;
+    @include md {
+        width:250px;
+        height:270px;
+    }
 }
 
+
 .adminAddress{
-    width: 250px;
+    max-width: 250px;
     height: 270px;
     text-align: center;
+    @include md {
+        width:250px;
+        height:270px;
+    }
     p{
         margin-top: 1rem;
     }
@@ -194,7 +221,7 @@ height: 80%;
             align-items: center;
             justify-content: center;
             @include md {
-                grid-template-columns: 250px 250px ;
+                grid-template-columns: 250px 250px 250px ;
              }
         }
     }
@@ -237,7 +264,7 @@ margin: 2rem auto;
         }
         .contact{
             width: 100%;
-            height: 40vh;
+            height: 45vh;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -253,14 +280,14 @@ margin: 2rem auto;
             .menuItems {
                 list-style-type: none;
                 display: flex;
-              margin-top: 2.5rem;
+              margin-top: 1rem;
                 justify-content: center;
                 flex-direction: column;
-                gap: 1.2rem;
+                gap: 1rem;
               
                 @include md {
                   
-                  
+                    margin-top: 2.5rem;
                 }
                 .menuItem {
                     transition: all ease 0.3s;
@@ -268,6 +295,7 @@ margin: 2rem auto;
                     display: flex;
                     gap: 1rem;
                     font-size: 13px;
+                  
                     @include md {
                         font-size: 16px;
                     }
@@ -288,8 +316,8 @@ margin: 2rem auto;
             
                 gap: 10px;
                 .icon {
-                    width: 50px;
-                    height: 50px;
+                    width: 30px;
+                    height: 30px;
                     border-radius: 50%;
                     background-color: var(--black);
                     display: flex;
@@ -297,6 +325,10 @@ margin: 2rem auto;
                     justify-content: center;
                     cursor: pointer;
                     transition: all ease 0.3s;
+                    @include md {
+                        width: 50px;
+                        height: 50px;
+                    }
                     &:hover {
                         box-shadow: 0 0 0.625em var(--pink);
                         color: var(--pink);
