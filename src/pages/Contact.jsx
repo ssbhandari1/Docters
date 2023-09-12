@@ -9,6 +9,14 @@ import {
   FaEnvelope
 } from "react-icons/fa";
 const Contact = () => {
+
+  const generateWhatsAppLink = () => {
+    const phoneNumber = '8271593648'; // Replace with the desired phone number
+    const message = 'Hello, this is a test message.'; // Replace with your message
+    const encodedMessage = encodeURIComponent(message);
+    return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+}
+
   return (
     <div className="aboutContainer">
 
@@ -23,7 +31,10 @@ const Contact = () => {
               <p>say something to start a live chat!</p>
 
               <ul className="menuItems">
-                <li className="menuItem"><FaWhatsapp /> <p>9199599591</p></li>
+                <li className="menuItem"> <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp />
+                        </a>
+                        <p>9199599591</p></li>
                 <li className="menuItem"><FaEnvelope /> <p>info@hellomydocter.in</p></li>
                 <li className="menuItem"><FaMapMarkerAlt /> <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p></li>
 

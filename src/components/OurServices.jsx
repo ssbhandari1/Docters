@@ -1,25 +1,53 @@
-import { CardMedia, Paper, Typography } from '@mui/material'
-import React from 'react'
+import { CardMedia, Dialog, DialogTitle, FormControl, InputLabel, MenuItem, Paper, Select, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import sr1 from '../assets/sr1.png'
 import sr2 from '../assets/sr2.png'
 import sr3 from '../assets/sr3.png'
 import sr4 from '../assets/sr4.png'
+import CancelIcon from '@mui/icons-material/Cancel';
+ import doctor from '../assets/about/login-popup-doctor.png'
 
-
+const teamsData=[
+  {name:'Dr. ABHAY PANDEY',position:'Founder',img:doctor,contact:'9857643892'},
+  {name:'Dr. Ajay PANDEY',position:'Founder',img:doctor,contact:'6457643892'},
+  {name:'Dr. Rohit PANDEY',position:'Founder',img:doctor,contact:'8957643892'},
+  {name:'Dr. Mohit PANDEY',position:'Founder',img:doctor,contact:'7857643892'},
+]
 const OurServices = () => {
+  const [selectDocter,setSelectDocter]=useState([teamsData[0]])
+  console.log(selectDocter)
+const[dailog,setDialog]=useState(false)
+
+const handleOpenDialog=()=>{
+
+  setDialog(true)
+}
+
+const handleClose=()=>{
+  setDialog(false)
+}
+
+
+const handleSlectDoc=(index)=>{
+  setSelectDocter([teamsData[index]])
+
+}
   return (
    <div className="ourServices">
     <h1>Our Services</h1>
     <p>"घर बैठे हमारी सेवाओं का लाभ उठाएं  - भागदौड़ और परेशानियों से मुक्ति पाएं!"</p>
   <div className="serviceDetails">
-    <Paper elevation={15} sx={{width:270,height:270,display:'flex',flexDirection:'column',justifyContent:'center',gap:'1rem',alignItems:'center' ,cursor:'pointer',padding:'0 2rem',transition:'all 0.3s ease-in-out','&:hover': { backgroundColor:"lightskyblue"}  }}>
+    <Paper elevation={15} sx={{width:270,height:270,display:'flex',flexDirection:'column',justifyContent:'center',gap:'1rem',alignItems:'center' ,cursor:'pointer',padding:'0 2rem',transition:'all 0.3s ease-in-out','&:hover': { backgroundColor:"lightskyblue"}  }}
+     onClick={handleOpenDialog}
+    >
     <CardMedia
                   component="img"
                   sx={{ width: '80px', height: '80px', objectFit: 'cover' }}
                   image={sr1}
                   alt="services"
+                
                 />
-                <Typography variant='h6' sx={{fontWeight:'600'}}>Docter Appointment</Typography>
+                <Typography variant='h6' sx={{fontWeight:'600'}}>Doctor Appointment</Typography>
                 <Typography variant='' sx={{textAlign:'center',fontSize:'.91rem',lineHeight:'1.3rem'}}>घर बैठे कॉल से अपॉइंटमेंट बुक करने की सुविधा!</Typography>
 
     </Paper>
@@ -64,6 +92,49 @@ const OurServices = () => {
     </Paper>
 
   </div>
+  <Dialog  open={dailog} className='doc'>
+<CancelIcon sx={{position:'absolute',cursor:'pointer'}} onClick={handleClose}/>
+      <DialogTitle sx={{textAlign:'center',fontWeight:'bold'}}>Doctor Appointment</DialogTitle>
+      <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+      <InputLabel id="demo-select-small-label">Doctor's</InputLabel>
+      <Select
+        labelId="demo-select-small-label"
+        id="demo-select-small"
+      label="Doctor's"
+     >
+      {
+        teamsData.map((team,index)=>{
+          return(
+            <MenuItem key={index} value={index} onClick={()=>handleSlectDoc(index)}>{team.name}</MenuItem>
+
+          )
+        })
+      }
+     
+      </Select>
+    </FormControl>
+
+
+{
+  selectDocter.map((doc,index)=>{
+    return(
+      <Paper key={index}  elevation={10} className='doctercontact' >
+      <CardMedia
+                component="img"
+                sx={{ width:200, height: 200, objectFit: 'cover' }}
+                image={doc.img}
+                alt="about"
+              /> 
+              <Typography sx={{fontSize:'1.1rem',fontWeight:'550'}} >{doc.name}</Typography>
+              <Typography sx={{fontWeight:'500'}} >{doc.contact}</Typography>
+
+      </Paper>
+    )
+  })
+}
+
+   
+      </Dialog>
    </div>
   )
 }

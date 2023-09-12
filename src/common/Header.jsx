@@ -3,7 +3,7 @@ import './style.scss'
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
+  FaWhatsapp,
   FaLinkedin,
   FaBars
 } from "react-icons/fa";
@@ -34,6 +34,14 @@ if(type==='Home'){
   navigate('contact')
 }
   }
+
+
+  const generateWhatsAppLink = () => {
+    const phoneNumber = '8271593648'; // Replace with the desired phone number
+    const message = 'Hello, this is a test message.'; // Replace with your message
+    const encodedMessage = encodeURIComponent(message);
+    return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+}
   
   return (
     <header className={`header`}>
@@ -47,7 +55,9 @@ if(type==='Home'){
                         <FaInstagram />
                     </span>
                     <span className="icon">
-                        <FaTwitter />
+                    <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp />
+                        </a>
                     </span>
                     <span className="icon">
                         <FaLinkedin />
