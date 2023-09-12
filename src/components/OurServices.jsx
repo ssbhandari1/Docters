@@ -8,10 +8,10 @@ import CancelIcon from '@mui/icons-material/Cancel';
  import doctor from '../assets/about/login-popup-doctor.png'
 
 const teamsData=[
-  {name:'Dr. ABHAY PANDEY',position:'Founder',img:doctor,contact:'9857643892'},
-  {name:'Dr. Ajay PANDEY',position:'Founder',img:doctor,contact:'6457643892'},
-  {name:'Dr. Rohit PANDEY',position:'Founder',img:doctor,contact:'8957643892'},
-  {name:'Dr. Mohit PANDEY',position:'Founder',img:doctor,contact:'7857643892'},
+  {id:'A',name:'Dr. ABHAY PANDEY',position:'Founder',img:doctor,contact:'9857643892'},
+  {id:'B',name:'Dr. Ajay PANDEY',position:'Founder',img:doctor,contact:'6457643892'},
+  {id:'C',name:'Dr. Rohit PANDEY',position:'Founder',img:doctor,contact:'8957643892'},
+  { id:'D',name:'Dr. Mohit PANDEY',position:'Founder',img:doctor,contact:'7857643892'},
 ]
 const OurServices = () => {
   const [selectDocter,setSelectDocter]=useState([teamsData[0]])
@@ -96,16 +96,16 @@ const handleSlectDoc=(index)=>{
 <CancelIcon sx={{position:'absolute',cursor:'pointer'}} onClick={handleClose}/>
       <DialogTitle sx={{textAlign:'center',fontWeight:'bold'}}>Doctor Appointment</DialogTitle>
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small-label">Doctor's</InputLabel>
+      <InputLabel id="demo-select-small-label">District</InputLabel>
       <Select
         labelId="demo-select-small-label"
         id="demo-select-small"
-      label="Doctor's"
+      label="District"
      >
       {
         teamsData.map((team,index)=>{
           return(
-            <MenuItem key={index} value={index} onClick={()=>handleSlectDoc(index)}>{team.name}</MenuItem>
+            <MenuItem key={index} value={index} onClick={()=>handleSlectDoc(index)}>{team.id}</MenuItem>
 
           )
         })

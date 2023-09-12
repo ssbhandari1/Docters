@@ -35,11 +35,12 @@ const Footer = () => {
                 <ul className="menuItems">
                     <h2>Contact us</h2>
                     <li className="menuItem"><FaMapMarkerAlt /> <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p></li>
-                    <li className="menuItem">
-                        <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                 
+                        <a className="menuItem" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
+                            <p>9199599591</p>
                         </a>
-                        <p>9199599591</p></li>
+                     
                     <li className="menuItem"><FaEnvelope /> <p>info@hellomydocter.in</p></li>
                 </ul>
                 <div className="followus">
@@ -54,9 +55,13 @@ const Footer = () => {
                         <span className="icon">
                             <FaTwitter />
                         </span>
-                        <span className="icon">
-                            <FaLinkedin />
-                        </span>
+                        
+                            <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp />
+                            </a>
+                
+                      
+                     
                     </div>
                 </div>
             </div>
