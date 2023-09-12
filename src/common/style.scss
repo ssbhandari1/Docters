@@ -50,6 +50,12 @@
             justify-content: center;
             cursor: pointer;
             transition: all ease 0.3s;
+            a{
+                color: white;
+                &:hover {
+                  color:green
+                }
+            }
             &:hover {
                 box-shadow: 0 0 0.625em var(--pink);
                 color: var(--pink);
@@ -145,12 +151,16 @@
             display: flex;
             gap: 1rem;
             font-size: 12px;
+            a{
+                color: white;
+                &:hover {
+                    color: var(--pink);
+                }
+            }
             @include md {
                 font-size: 16px;
             }
-            &:hover {
-                color: var(--pink);
-            }
+          
         }
     }
 .followus{
