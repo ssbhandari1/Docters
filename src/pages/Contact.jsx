@@ -31,10 +31,10 @@ const Contact = () => {
               <p>say something to start a live chat!</p>
 
               <ul className="menuItems">
-                <li className="menuItem"> <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a className="menuItem" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
+                            <p>9199599591</p>
                         </a>
-                        <p>9199599591</p></li>
                 <li className="menuItem"><FaEnvelope /> <p>info@hellomydocter.in</p></li>
                 <li className="menuItem"><FaMapMarkerAlt /> <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p></li>
 
@@ -50,9 +50,10 @@ const Contact = () => {
                 <span className="icon">
                   <FaTwitter />
                 </span>
-                <span className="icon">
-                  <FaLinkedin />
-                </span>
+                <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp />
+                            </a>
+                
               </div>
             </div>
            
