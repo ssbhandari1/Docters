@@ -171,14 +171,25 @@ box-shadow: 1px 2px 10px 2px black ;
 
     .testimonial{
         width: 100%;
-      margin: 2rem 0;
-   gap: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+       margin: 2rem 0;
+    
+       gap: 1rem;
+  
+        display: grid;
+        grid-template-columns: repeat(1, 250px); 
+        justify-content: center; 
+        align-items: center;      
+       
         @include md {
-            flex-direction: row;
+            grid-template-columns: repeat(2, 250px); 
+            justify-content: space-around; 
+            gap: 2rem;
+
+         }
+         @include lg{
+            grid-template-columns: repeat(4, 250px); 
+            justify-content: space-around; 
+            gap: 2rem;
          }
     }
  
