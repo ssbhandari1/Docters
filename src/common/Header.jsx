@@ -4,7 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
-  FaLinkedin,
+  FaTwitter,
   FaBars
 } from "react-icons/fa";
 import { Box, Button, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, SwipeableDrawer } from '@mui/material'
@@ -49,10 +49,16 @@ if(type==='Home'){
         <h4>Call Center Number - 9199599591(Timing - 6AM - 10AM)</h4>
         <Stack className='headerIcon' direction='row' sx={{gap:'1rem'}}> 
         <span className="icon">
-                        <FaFacebookF />
+        <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookF />
+                        </a>
+                      
                     </span>
                     <span className="icon">
-                        <FaInstagram />
+                    <a className="icon" href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                      
                     </span>
                     <span className="icon">
                     <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
@@ -60,7 +66,9 @@ if(type==='Home'){
                         </a>
                     </span>
                     <span className="icon">
-                        <FaLinkedin />
+                    <a className="icon" href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
                     </span>
         </Stack>
       </nav>

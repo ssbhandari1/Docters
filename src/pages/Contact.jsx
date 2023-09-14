@@ -12,7 +12,7 @@ const Contact = () => {
 
   const generateWhatsAppLink = () => {
     const phoneNumber = '8271593648'; // Replace with the desired phone number
-    const message = 'Hello, this is a test message.'; // Replace with your message
+    const message = 'Hii'; // Replace with your message
     const encodedMessage = encodeURIComponent(message);
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 }
@@ -41,18 +41,20 @@ const Contact = () => {
               </ul>
 
               <div className="socialIcons">
-                <span className="icon">
-                  <FaFacebookF />
-                </span>
-                <span className="icon">
-                  <FaInstagram />
-                </span>
-                <span className="icon">
-                  <FaTwitter />
-                </span>
-                <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a className="icon" href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookF />
+                        </a>
+                        <a className="icon" href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                        <a className="icon" href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
+
+
+                        <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
-                            </a>
+                        </a>
                 
               </div>
             </div>
