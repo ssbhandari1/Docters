@@ -8,6 +8,7 @@ const TeamsData=[
   {name:'ABHAY PANDEY',position:'Founder',img:doctor},
   {name:'ABHAY PANDEY',position:'Founder',img:doctor},
   {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
 ]
 
 
@@ -41,7 +42,7 @@ const TeamsData=[
     {
       TeamsData.map((team,index)=>{
         return(
-          <Paper key={index} elevation={10} sx={{width:250,height:300,textAlign:'center'}}>
+          <Paper key={index} elevation={10} sx={{width:250,height:300,textAlign:'center',}}>
           <CardMedia
                     component="img"
                     sx={{ width:250, height: 250, objectFit: 'cover' }}
