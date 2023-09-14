@@ -30,7 +30,7 @@ const Gallery = () => {
           >
           <CardMedia
                     component="img"
-                    sx={{ width:250, height: 250, objectFit: 'cover' }}
+                    sx={{ width:250, height: 270, objectFit: "cover"}}
                     image={team.img}
                     alt="about"
                   /> 
