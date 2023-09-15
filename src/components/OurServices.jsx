@@ -5,15 +5,17 @@ import sr2 from '../assets/sr2.png'
 import sr3 from '../assets/sr3.png'
 import sr4 from '../assets/sr4.png'
 import CancelIcon from '@mui/icons-material/Cancel';
-import doctor from '../assets/about/login-popup-doctor.png'
+ import doctor from '../assets/vikash_kumar.jpeg'
+ import doctor1 from '../assets/comming.jpg'
 
 
 //for select Docter location wise
-const teamsData = [
-  { id: 'A', name: 'Dr. ABHAY PANDEY', position: 'Founder', img: doctor, contact: '9857643892' },
-  { id: 'B', name: 'Dr. Ajay PANDEY', position: 'Founder', img: doctor, contact: '6457643892' },
-  { id: 'C', name: 'Dr. Rohit PANDEY', position: 'Founder', img: doctor, contact: '8957643892' },
-  { id: 'D', name: 'Dr. Mohit PANDEY', position: 'Founder', img: doctor, contact: '7857643892' },
+const teamsData=[
+  {id:'Chapra',name:'Dr. Vikas Kumar',position:'Founder',img:doctor,contact:'+91 9199226410'},
+  {id:'Comming soon',img:doctor1},
+  // {id:'Siwan',name:'Dr. Hans Kumar sonu',position:'Founder',img:doctor1,contact:'6457643892'},
+  // {id:'Patna',name:' Dr.shankar Kumar dalna',position:'Founder',img:doctor2,contact:'8957643892'},
+  // { id:'Muzzfarpur',name:'Dr. Mohit PANDEY',position:'Founder',img:doctor,contact:'7857643892'},
 ]
 
 

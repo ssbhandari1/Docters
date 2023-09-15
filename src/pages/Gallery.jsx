@@ -1,16 +1,17 @@
 import { CardMedia, Paper } from '@mui/material'
 import React from 'react'
-import doctor from '../assets/about/login-popup-doctor.png'
+import doctor from '../assets/Certificate.jpeg'
+import doctor1 from '../assets/Temp1.jpeg'
 
 const Gallery = () => {
 
   const TeamsData=[
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+    {name:'ABHAY PANDEY',position:'Founder',img:doctor1},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
     {name:'ABHAY PANDEY',position:'Founder',img:doctor},
-    {name:'ABHAY PANDEY',position:'Founder',img:`https://images.unsplash.com/photo-1501183007986-d0d080b147f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80`},
 
   ]
   return (
@@ -30,7 +31,7 @@ const Gallery = () => {
           >
           <CardMedia
                     component="img"
-                    sx={{ width:250, height: 270, objectFit: "cover"}}
+                    sx={{ width:250, height: 270, objectFit: "fill"}}
                     image={team.img}
                     alt="about"
                   /> 

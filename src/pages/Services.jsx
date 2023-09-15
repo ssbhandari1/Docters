@@ -1,14 +1,16 @@
 import { CardMedia, Paper, Typography } from '@mui/material'
 import React from 'react'
-import doctor from '../assets/about/login-popup-doctor.png'
+import doctor from '../assets/Vikash_Kumar.jpeg'
+import doctor1 from '../assets/Dr.shankar_Kumar_dalna.jpeg'
+import doctor2 from '../assets/Hans_kumar_sonu.jpg'
 const Services = () => {
 
 const TeamsData=[
-  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
-  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
-  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
-  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
-  {name:'ABHAY PANDEY',position:'Founder',img:doctor},
+  {name:'Dr. Vikash kumar',position:'Founder',img:doctor},
+  {name:'Dr. Shankar Kumar',position:'Founder',img:doctor1},
+  {name:'Hans kumar sonu',position:'Co-Founder',img:doctor2},
+  
+  // {name:'Hans kumar sonu',position:'Co-Founder',img:doctor2},
 ]
 
 
@@ -26,10 +28,10 @@ const TeamsData=[
                 /> 
         </Paper>
         <div className="adminAddress">
-          <h2>Dr. Vinod sharma</h2>
-          <p>Cardiologists Specialist</p>
-          <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p>
-          <p>921345769 </p>
+        <h2>Dr. Vikash Kumar</h2>
+          <p>MD(Pharma)</p>
+          <p>New Bank Colony, Pratap Nagar, Chapra, Zail Shahar, Bihar 841301</p>
+          <p>+91 9199226410</p>
 
 
         </div>
@@ -42,10 +44,10 @@ const TeamsData=[
     {
       TeamsData.map((team,index)=>{
         return(
-          <Paper key={index} elevation={10} sx={{width:250,height:300,textAlign:'center',}}>
+          <Paper key={index} elevation={10} sx={{width:250,height:320,textAlign:'center',}}>
           <CardMedia
                     component="img"
-                    sx={{ width:250, height: 250, objectFit: 'cover' }}
+                    sx={{ width:250, height: 270, objectFit: "cover",objectPosition:"top" }}
                     image={team.img}
                     alt="about"
                   /> 
