@@ -5,7 +5,7 @@ import sr2 from '../assets/sr2.png'
 import sr3 from '../assets/sr3.png'
 import sr4 from '../assets/sr4.png'
 import CancelIcon from '@mui/icons-material/Cancel';
- import doctor from '../assets/vikash_kumar.jpeg'
+ import doctor from '../assets/Vikash_kumar.jpeg'
  import doctor1 from '../assets/comming.jpg'
 
 

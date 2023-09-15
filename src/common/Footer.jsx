@@ -26,7 +26,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="contentWrapper">
             <div className="discription">
-                    <h2>Doctor Seva</h2>
+                    <h1>Doctor Seva</h1>
                     <p>Our specialized support center is here to assist with all your needs, typically responding within 1-2 hours.</p>
                 </div>
 
