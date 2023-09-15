@@ -15,8 +15,8 @@ import './style.scss'
 const Footer = () => {
 
     const generateWhatsAppLink = () => {
-        const phoneNumber = '8271593648'; // Replace with the desired phone number
-        const message = 'Hello, this is a test message.'; // Replace with your message
+        const phoneNumber = '9199226410'; // Replace with the desired phone number
+        const message = 'Hello Doctor'; // Replace with your message
         const encodedMessage = encodeURIComponent(message);
         return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     }
@@ -25,43 +25,43 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="contentWrapper">
-                <div className="discription">
-                    <h2>Hello My Doctor</h2>
-                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi harum corporis consequuntur
-                        raesentium nostrum voluptatibus quasi optio aut?</p>
+            <div className="discription">
+                    <h1>Doctor Seva</h1>
+                    <p>Our specialized support center is here to assist with all your needs, typically responding within 1-2 hours.</p>
                 </div>
 
 
                 <ul className="menuItems">
                     <h2>Contact us</h2>
-                    <li className="menuItem"><FaMapMarkerAlt /> <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p></li>
+                    <li className="menuItem"><FaMapMarkerAlt /> <p>New Bank Colony, Pratap Nagar, Chapra, Zail Shahar, Bihar 841301</p></li>
                  
                         <a className="menuItem" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
-                            <p>9199599591</p>
+                            <p>+91 9199226410</p>
                         </a>
                      
-                    <li className="menuItem"><FaEnvelope /> <p>info@hellomydocter.in</p></li>
+                    <li className="menuItem"><FaEnvelope /> <p>doctorseva06@gmail.com</p></li>
                 </ul>
                 <div className="followus">
                     <h2>Follow us</h2>
                     <div className="socialIcons">
-                        <span className="icon">
+                        <a className="icon" href="https://www.facebook.com/profile.php?id=100094951843829&mibextid=avESrC" target="_blank" rel="noopener noreferrer">
                             <FaFacebookF />
-                        </span>
-                        <span className="icon">
+                        </a>
+                        <a className="icon" href="" target="_blank" rel="noopener noreferrer">
                             <FaInstagram />
-                        </span>
-                        <span className="icon">
+                        </a>
+                        <a className="icon" href="" target="_blank" rel="noopener noreferrer">
                             <FaTwitter />
-                        </span>
-                        
-                            <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                        </a>
+
+
+                        <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
-                            </a>
-                
-                      
-                     
+                        </a>
+
+
+
                     </div>
                 </div>
             </div>

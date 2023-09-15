@@ -4,7 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
-  FaLinkedin,
+  FaTwitter,
   FaBars
 } from "react-icons/fa";
 import { Box, Button, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, SwipeableDrawer } from '@mui/material'
@@ -37,8 +37,8 @@ if(type==='Home'){
 
 
   const generateWhatsAppLink = () => {
-    const phoneNumber = '8271593648'; // Replace with the desired phone number
-    const message = 'Hello, this is a test message.'; // Replace with your message
+    const phoneNumber = '9199226410'; // Replace with the desired phone number
+    const message = 'Hello, Doctor.'; // Replace with your message
     const encodedMessage = encodeURIComponent(message);
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 }
@@ -46,13 +46,19 @@ if(type==='Home'){
   return (
     <header className={`header`}>
       <nav className={`nav`}>
-        <h4>Call Center Number - 9199599591(Timing - 6AM - 10AM)</h4>
+      <h4>Call Center Number:- +91 9199226410 (Timing : 9AM - 10PM)</h4>
         <Stack className='headerIcon' direction='row' sx={{gap:'1rem'}}> 
         <span className="icon">
-                        <FaFacebookF />
+        <a href="https://www.facebook.com/profile.php?id=100094951843829&mibextid=avESrC" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookF />
+                        </a>
+                      
                     </span>
                     <span className="icon">
-                        <FaInstagram />
+                    <a className="icon" href="" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                      
                     </span>
                     <span className="icon">
                     <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
@@ -60,7 +66,9 @@ if(type==='Home'){
                         </a>
                     </span>
                     <span className="icon">
-                        <FaLinkedin />
+                    <a className="icon" href="" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
                     </span>
         </Stack>
       </nav>

@@ -12,7 +12,7 @@ const Contact = () => {
 
   const generateWhatsAppLink = () => {
     const phoneNumber = '8271593648'; // Replace with the desired phone number
-    const message = 'Hello, this is a test message.'; // Replace with your message
+    const message = 'Hii'; // Replace with your message
     const encodedMessage = encodeURIComponent(message);
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 }
@@ -33,40 +33,39 @@ const Contact = () => {
               <ul className="menuItems">
               <a className="menuItem" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
-                            <p>9199599591</p>
+                            <p>+91 9199226410</p>
                         </a>
-                <li className="menuItem"><FaEnvelope /> <p>info@hellomydocter.in</p></li>
-                <li className="menuItem"><FaMapMarkerAlt /> <p>V-504,5th floor ,homes 121,sec-121 Noida 201302</p></li>
+                <li className="menuItem"><FaEnvelope /> <p>doctorseva06@gmail.com</p></li>
+                <li className="menuItem"><FaMapMarkerAlt /> <p>New Bank Colony, Pratap Nagar, Chapra, Zail Shahar, Bihar 841301</p></li>
 
               </ul>
 
               <div className="socialIcons">
-                <span className="icon">
-                  <FaFacebookF />
-                </span>
-                <span className="icon">
-                  <FaInstagram />
-                </span>
-                <span className="icon">
-                  <FaTwitter />
-                </span>
-                <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a className="icon" href="https://www.facebook.com/profile.php?id=100094951843829&mibextid=avESrC" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookF />
+                        </a>
+                        <a className="icon" href="">
+                            <FaInstagram />
+                        </a>
+                        <a className="icon" href="" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
+
+
+                        <a className="icon" href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
-                            </a>
+                        </a>
                 
               </div>
             </div>
            
-              <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.7928748768704!2d76.78345677473342!3d30.667960488761697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec8230a9dd53%3A0x42c6835dc358b53a!2sShaheed%20Bhagat%20Singh%20International%20Airport%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1694149312428!5m2!1sen!2sin"
-
-                 allowfullscreen=''
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224.54717423019332!2d84.72152543317435!3d25.7786617807377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992bbc9b272c691%3A0xfab7205074509b59!2sDOCTOR%20SEVA!5e0!3m2!1sen!2sin!4v1694627356652!5m2!1sen!2sin" 
+                  
+                  allowfullscreen=''
                   loading="lazy" 
                   referrerpolicy="no-referrer-when-downgrade"
                   className='map'
-                  >
-                 
-                  </iframe>
+                  ></iframe>
 
         
           </div>
